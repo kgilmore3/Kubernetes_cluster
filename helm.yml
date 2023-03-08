@@ -1,0 +1,93 @@
+ apiVersion: v2
+# name: my-microservices
+# description: A Helm chart for deploying my microservices
+
+# dependencies:
+# - name: postgresql
+#   version: 10.4.0
+#   repository: https://charts.bitnami.com/bitnami
+
+# - name: redis
+#   version: 14.7.2
+#   repository: https://charts.bitnami.com/bitnami
+
+# - name: nginx
+#   version: 5.5.5
+#   repository: https://charts.bitnami.com/bitnami
+
+# - name: my-service
+#   version: 1.0.0
+#   repository: https://github.com/my-service
+
+# - name: my-other-service
+#   version: 2.0.0
+#   repository: https://github.com/my-other-service
+
+# - name: my-third-service
+#   version: 3.0.0
+#   repository: https://github.com/my-third-service
+
+# values:
+#   postgresql:
+#     postgresqlUsername: myuser
+#     postgresqlPassword: mypassword
+#     postgresqlDatabase: mydatabase
+
+#   redis:
+#     redisPassword: myredispassword
+
+#   nginx:
+#     service:
+#       type: LoadBalancer
+#       port: 80
+
+#   my-service:
+#     image:
+#       repository: my-registry/my-service
+#       tag: latest
+#     env:
+#       - name: MY_SERVICE_DB_HOST
+#         value: postgresql
+#       - name: MY_SERVICE_DB_USERNAME
+#         value: myuser
+#       - name: MY_SERVICE_DB_PASSWORD
+#         valueFrom:
+#           secretKeyRef:
+#             name: my-service-secrets
+#             key: db-password
+
+#   my-other-service:
+#     image:
+#       repository: my-registry/my-other-service
+#       tag: latest
+#     env:
+#       - name: MY_OTHER_SERVICE_DB_HOST
+#         value: postgresql
+#       - name: MY_OTHER_SERVICE_REDIS_HOST
+#         value: redis
+#       - name: MY_OTHER_SERVICE_REDIS_PASSWORD
+#         valueFrom:
+#           secretKeyRef:
+#             name: my-other-service-secrets
+#             key: redis-password
+
+#   my-third-service:
+#     image:
+#       repository: my-registry/my-third-service
+#       tag: latest
+#     env:
+#       - name: MY_THIRD_SERVICE_REDIS_HOST
+#         value: redis
+#       - name: MY_THIRD_SERVICE_REDIS_PASSWORD
+#         valueFrom:
+#           secretKeyRef:
+#             name: my-third-service-secrets
+#             key: redis-password
+
+#   secrets:
+#     my-service-secrets:
+#       db-password: mysecretdbpassword
+#     my-other-service-secrets:
+#       redis-password: mysecretredispassword
+#     my-third-service-secrets:
+#       redis-password: myothersecretredispassword
